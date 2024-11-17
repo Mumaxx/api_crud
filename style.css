@@ -1,0 +1,252 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral do Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #004A7C, #0082D1);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Header e Título */
+header {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo translúcido */
+    color: white;
+    text-align: center;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Título principal */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Subtítulo */
+p {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Botão */
+.btn {
+    background-color: #0082D1;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #0065A1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Estilo do Formulário */
+form {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse nos inputs */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #0082D1;
+    background-color: #eaf4fe;
+    outline: none;
+}
+
+/* Título do formulário */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #004A7C;
+}
+
+/* Botão do Formulário */
+button {
+    background-color: #004A7C;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #00305D;
+    transform: translateY(-3px);
+}
+
+/* Estilo do container de login */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Formulário para o login */
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo dos links (Esqueci a senha) */
+.login-container .forgot-password {
+    margin-top: 10px;
+    color: #0082D1;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.login-container .forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do container de estoque */
+#carros-list {
+    max-width: 900px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.carro-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.carro-item h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #004A7C;
+    font-weight: 600;
+}
+
+.carro-item p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"] {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    button {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 10px 15px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"] {
+        font-size: 0.9rem;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
